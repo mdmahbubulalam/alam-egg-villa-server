@@ -113,13 +113,6 @@ client.connect(err => {
     })
   })
 
-  // app.get('/shipment', (req, res) => {
-  //   shipmentCollection.find({email:req.query.email})
-  //   .toArray((err,documents) => {
-  //     res.send(documents[0]);
-  //   })
-  // })
-
   app.get('/shipment', (req, res) => {
     
     const bearer = req.headers.authorization;
