@@ -16,7 +16,7 @@ app.all('*', function(req, res, next) {
   next();
 });
 app.use(cors());
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 
 const admin = require("firebase-admin");
@@ -367,4 +367,4 @@ app.delete('/deleteComment/:id', (req, res) => {
 
 
 
-app.listen(PORT)
+app.listen(process.env.PORT || port)
