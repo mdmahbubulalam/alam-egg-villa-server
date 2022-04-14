@@ -367,4 +367,4 @@ app.delete('/deleteComment/:id', (req, res) => {
 
 
 
-app.listen(port)
+app.listen(process.env.PORT || 5000)
