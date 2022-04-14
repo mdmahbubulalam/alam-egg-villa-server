@@ -21,7 +21,7 @@ const port = process.env.PORT || 5000;
 
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./configs/alam-egg-villa-firebase-adminsdk-mp4gw-c6dbc3fb8e.json");
+//const serviceAccount = require("./configs/alam-egg-villa-firebase-adminsdk-mp4gw-c6dbc3fb8e.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(
