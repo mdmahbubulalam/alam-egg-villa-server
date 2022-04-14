@@ -9,14 +9,14 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json())
-// app.all('*', function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-//   res.header('Access-Control-Allow-Headers', 'Content-Type');
-//   next();
-// });
+app.all('*', function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 app.use(cors());
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 
 const admin = require("firebase-admin");
@@ -367,4 +367,4 @@ app.delete('/deleteComment/:id', (req, res) => {
 
 
 
-app.listen(process.env.PORT || 5000)
+app.listen(PORT)
